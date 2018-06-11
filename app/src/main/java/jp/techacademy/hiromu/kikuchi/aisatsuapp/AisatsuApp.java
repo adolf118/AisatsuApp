@@ -42,22 +42,31 @@ public class AisatsuApp extends AppCompatActivity implements View.OnClickListene
                         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                             Log.d("UI-PARTS", String.valueOf(hourOfDay) + ":" + String.valueOf(minute));
 
+                            TextView textView = (TextView) findViewById(R.id.TextView);
+
                             if (hourOfDay >= 2 && hourOfDay <= 9 && minute <= 59) {
                                 Log.d("Aisatsu", "おはよう");
+                                textView.setText("おはよう");
                             } else if (hourOfDay >= 10 && hourOfDay <=17 && minute <= 59) {
                                 Log.d("Aisatsu1", "こんにちは");
+                                textView.setText("こんにちは");
                             } else if (hourOfDay >= 18 && hourOfDay <= 1 && minute <= 59) {
                                 Log.d("Aisatsu2", "こんばんは");
+                                textView.setText("こんばんは");
                             }
+
+
 
                         }
                     },
-                    15,
+                    19,
                     58,
                     true);
             timePickerDialog.show();
-            TextView textView = (TextView) findViewById(R.id.TextView);
-            textView.setText("こんにちは");
+
+
+
+
 
         }
 
