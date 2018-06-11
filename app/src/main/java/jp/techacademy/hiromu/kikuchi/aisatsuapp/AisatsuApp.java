@@ -56,8 +56,10 @@ public class AisatsuApp extends AppCompatActivity implements View.OnClickListene
                     58,
                     true);
             timePickerDialog.show();
-
+            TextView textView = (TextView) findViewById(R.id.TextView);
+            textView.setText("こんにちは");
 
         }
+
     }
 
