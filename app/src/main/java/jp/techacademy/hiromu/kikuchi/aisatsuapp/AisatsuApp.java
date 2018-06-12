@@ -47,17 +47,19 @@ public class AisatsuApp extends AppCompatActivity implements View.OnClickListene
                             if (hourOfDay >= 2 && hourOfDay <= 9 && minute <= 59) {
                                 Log.d("Aisatsu", "おはよう");
                                 textView.setText("おはよう");
-                            } else if (hourOfDay >= 10 && hourOfDay <=17 && minute <= 59) {
+
+                            } else if (hourOfDay >= 10 && hourOfDay <=17 ) {
                                 Log.d("Aisatsu1", "こんにちは");
                                 textView.setText("こんにちは");
-                            } else if (hourOfDay >= 18 && hourOfDay <= 1 && minute <= 59) {
+
+                            } else if (hourOfDay >= 18 || hourOfDay <=1  ) {
                                 Log.d("Aisatsu2", "こんばんは");
                                 textView.setText("こんばんは");
                             }
-                            
+
                         }
                     },
-                    15,
+                    21,
                     58,
                     true);
             timePickerDialog.show();
